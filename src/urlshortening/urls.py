@@ -8,5 +8,5 @@ urlpatterns = [
 #     url(r'^short/$', get_short_link),
 #     url(r'^invalidate/$', invalidate),
 #     url(r'^{}/(?P<short_id>.+)/$'.format(settings.REDIRECT_PREFIX), get_redirect)
-    url('/(?P<short_id>.+)/$', get_redirect)
+    url('(?P<short_id>.+)/$', get_redirect)
 ]
