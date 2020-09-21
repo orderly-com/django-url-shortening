@@ -38,6 +38,8 @@ def get_redirect(request, short_id):
             return HttpResponseNotFound()
     except Url.DoesNotExist:
         return HttpResponseNotFound()
+        url.redirect_count = url.redirect_count + 1
+        url.save(update_field=['redirect_count'])
     return HttpResponseRedirect(url.url)
 
 
